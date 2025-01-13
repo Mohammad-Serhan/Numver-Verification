@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 
 
-const port = process.env.PORT ;
 const mongoose = require('mongoose');
 
 const bodyParder = require('body-parser');
@@ -25,6 +24,8 @@ mongoose.connect(process.env.DB_URL,  { useNewUrlParser: true, useUnifiedTopolog
 );
 
 
+
+const port = process.env.PORT ;
 app.listen(port, () =>
 console.log(`The Server is running on port: ${port}`)
 );

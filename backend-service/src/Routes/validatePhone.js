@@ -19,7 +19,7 @@ const API_ACC_KEY = process.env.NUMVERIFY_ACESS_KEY;
   } catch (error) {
       console.log("Error", error.message);
   }
-console.log(phoneDetails);
+
 
   if (phoneDetails.valid === true){
     return phoneDetails;

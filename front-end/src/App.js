@@ -8,8 +8,9 @@ function App() {
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get("http://localhost:3000/")
+    axios.get("http://localhost:8080/")
       .then(res => {
+        console.log(res);
         setCustomers(res.data);
         setLoading(false);
       })
@@ -17,17 +18,17 @@ function App() {
   });
 
 
-  if (isLoading) {
-    return (
-      <div className="App">
-      <div className="text-gray-600 body-font">
-        <div className="container px-5 mt-12 mx-auto flex flex-wrap">
-          <div className="text-indigo-800 text-2xl  ">Loading ...</div>
-          </div>
-          </div>
-        </div>
-    )
-  }
+//   if (isLoading) {
+//     return (
+//       <div className="App">
+//       <div className="text-gray-600 body-font">
+//         <div className="container px-5 mt-12 mx-auto flex flex-wrap">
+//           <div className="text-indigo-800 text-2xl  ">Loading ...</div>
+//           </div>
+//           </div>
+//         </div>
+//     )
+//   }
 
   return (
     <div className="App">
