@@ -24,7 +24,7 @@ const Customer = (props) => {
 
   const createCustomer = async () => {
     if (checkFormInput()) {
-      const response = await API.post(``, customerDetails);
+      const response = await API.post(`${props.cusId}`, customerDetails);
 
       if (response.data["valid"] === false || !response.data["valid"]) {
         setPhoneError("not valide");

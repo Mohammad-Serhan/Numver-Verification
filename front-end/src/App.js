@@ -8,7 +8,7 @@ function App() {
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get("http://localhost:8080/")
+    axios.get("http://localhost:3000/")
       .then(res => {
         setCustomers(res.data);
         setLoading(false);
